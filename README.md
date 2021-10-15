@@ -1,0 +1,33 @@
+```SQL
+---CONSULTA 1
+SELECT DISTINCT deptno,job
+FROM emp;
+---CONSUTLA 2
+SELECT mgr
+FROM emp
+WHERE mgr IS NOT NULL;
+---CONSULTA 3
+SELECT DISTINCT loc
+FROM pro
+WHERE deptno=30;
+---CONSULTA 4
+SELECT empno,ename
+FROM emp
+WHERE mgr IS NULL;
+---CONSULTA 5
+SELECT empno,ename
+FROM emp
+WHERE mgr IS NOT NULL AND (sal>2500 OR sal+comm>2500);
+---CONSULTA 6
+SELECT empno,ename
+FROM emp
+WHERE ename LIKE 'S%';
+---CONSULTA 7
+SELECT EMPNO,ename 
+FROM emp 
+WHERE (sal+comm BETWEEN 1500 AND 2500) OR (Comm IS NULL AND sal BETWEEN 1500 AND 2500);
+---CONSUTA 8
+SELECT EMPNO,ename,sal, comm, job
+FROM emp
+WHERE job IN ('CLEARK', 'SALESMAN', 'ANALYST') AND (sal>1250 OR sal+comm>1250);
+```
